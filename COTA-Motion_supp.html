@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>COTA-Motion: Controllable Image-to-Video Synthesis with Dense Semantic Trajectories</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Table with Arrow Buttons</title>
+    <style>
+      .scrollable-table-container {
+          display: flex;
+          align-items: center;
+      }
+      #scrollableTableWrapper {
+          overflow-x: auto;
+          overflow-y: hidden;
+          white-space: normal;
+          
+      }
+      table {
+          border-collapse: collapse;
+          margin: auto;
+      }
+      th.sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #F1FAFA;
+      }    
+      th.sticky-second {
+        position: sticky;
+        left: 302px;
+        z-index: 1;
+        background-color: #F1FAFA;
+      }
+      .video-no-container video::-webkit-media-controls {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+<body>
+	<button style="position: fixed;right: 15px;top:  90%;height: 40px;width: 120px; font-size: 20px;" type="button"><a href="COTA-Motion_supp.html#top">Back to top</a></button> 
+  <div class="page-container">
+  <h1 align="center">COTA-Motion: Controllable Image-to-Video Synthesis <br/>with Dense Semantic Trajectories</h1>
+  <h2 align="center">Multimedia Materials</h2>
+	
+  <h2 align="center"><a style="color: red;">Please refresh the webpage if the content has not loaded.</a></h3>
+
+  <p align="center">&nbsp;</p>
+	<a href="COTA-Motion_supp.html#top"></a>
+
+  <ul>
+    <li><a href="COTA-Motion_supp.html#qualitative_results_container" style="font-size:x-large">Qualitative Results of COTA-Motion for Cross-Object Transfer</a></li><br>
+    <!-- sub section -->
+    <ul>
+      <li><a href="COTA-Motion_supp.html#motion_of_car" style="font-size:x-large">Motion of Car</a></li><br>
+      <li><a href="COTA-Motion_supp.html#motion_of_cartoon" style="font-size:x-large">Motion_of_Cartoon</a></li><br>
+      <li><a href="COTA-Motion_supp.html#motion_of_human" style="font-size:x-large">Motion_of_Human</a></li><br>
+    </ul>
+
+    <li><a href="COTA-Motion_supp.html#qualitative_compare" style="font-size:x-large">Qualitative Comparison</a></li><br>
+    <li><a href="COTA-Motion_supp.html#downstream_applications" style="font-size:x-large"> Downstream Applications</a></li><br>
+    <!-- <li><a href="COTA-Motion_supp.html#vis_embedding" style="font-size:x-large"> Visualization of Motion Embedding</a></li><br> -->
+
+      
+    </ul>
+
+  </ul>
+
+  	
+  <!------------------ BEGIN SECTION ------------------>
+ <p>&nbsp;</p>
+  <hr>
+  <h2 id="qualitative_results_container" align="center">Qualitative Results of COTA-Motion for Cross-Object Transfer</h2>
+
+  <h3 id="motion_of_car" align="left">1. Motion of Car</h3>
+  
+
+  <div class="scrollable-table-container" align="center">
+    <div id="scrollableTableWrapper" align="center">
+        <table width="1200" align="center" class="video-no-container">
+          <tbody>
+            <tr>
+              <th class="sticky"><video id="master3" width="300"  src="assets/qualitative_results/car/car/driving.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master3" width="300"  src="assets/qualitative_results/car/car/1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master3" width="300"  src="assets/qualitative_results/car/car/2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master3" width="300" src="assets/qualitative_results/car/car/3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            </tr>
+      
+            <tr>
+              <th width="300" class="sticky">  Driving Video</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+            </tr>
+      
+            <tr>
+              <th class="sticky"><video id="master4" width="300" src="assets/qualitative_results/car/car_turn/driving.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master4" width="300"  src="assets/qualitative_results/car/car_turn/1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master4" width="300"  src="assets/qualitative_results/car/car_turn/2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master4" width="300"  src="assets/qualitative_results/car/car_turn/3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            </tr>
+      
+            <tr>
+              <th width="300" class="sticky">  Driving Video</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+            </tr>
+
+            <tr>
+              <th class="sticky"><video id="master5" width="300" src="assets/qualitative_results/car/ss/driving.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master5" width="300"  src="assets/qualitative_results/car/ss/1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master5" width="300"  src="assets/qualitative_results/car/ss/2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              <th><video data-master-id="master5" width="300"  src="assets/qualitative_results/car/ss/3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            </tr>
+
+            <tr>
+              <th width="300" class="sticky">  Driving Video</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+              <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+            </tr>
+
+        </tbody>
+      </table>
+      
+    </div>
+
+  </div>
+
+
+
+  <h3 id="motion_of_cartoon" align="left">2.Motion_of_Cartoon</h3>
+
+
+  
+  <table width="1200" align="center" class="video-no-container">
+      <tbody>
+        
+        <tr>
+          <th class="sticky"><video id="master6" width="300" src="assets/qualitative_results/mgif/0001/driving.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master6" width="300"  src="assets/qualitative_results/mgif/0001/1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master6" width="300"  src="assets/qualitative_results/mgif/0001/2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master6" width="300"  src="assets/qualitative_results/mgif/0001/3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        </tr>
+
+        <tr>
+          <th width="300" class="sticky">  Driving Video</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+
+          <tr>
+            <th class="sticky"><video id="master7" width="300" src="assets/qualitative_results/mgif/0053/driving.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            <th><video data-master-id="master7" width="300"  src="assets/qualitative_results/mgif/0053/1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            <th><video data-master-id="master7" width="300"  src="assets/qualitative_results/mgif/0053/2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+            <th><video data-master-id="master7" width="300"  src="assets/qualitative_results/mgif/0053/3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          </tr>
+  
+          <tr>
+            <th width="300" class="sticky">  Driving Video</th>
+            <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+            <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+            <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+  </tbody>
+  </table>
+
+  <h3 id="motion_of_human" align="left">2.Motion_of_Human</h3>
+
+
+  <div id="scrollableTableWrapper" align="center">
+
+  <table width="1200" align="center" class="video-no-container">
+      <tbody>
+        
+        <tr>
+          <th class="sticky"><video id="master8" width="200" src="assets/qualitative_results/human/91-30/driving.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master8" width="300"  src="assets/qualitative_results/human/91-30/1.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master8" width="300"  src="assets/qualitative_results/human/91-30/2.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master8" width="300"  src="assets/qualitative_results/human/91-30/3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master8" width="300"  src="assets/qualitative_results/human/91-30/4.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+          <th><video data-master-id="master8" width="300"  src="assets/qualitative_results/human/91-30/5.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+        </tr>
+
+        <tr>
+          <th width="300" class="sticky">  Driving Video</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+          <th style="font-family: caveat; font-size: 25px;" width="300"> Genereted Frame</th>
+  </tbody>
+  </table>
+</div>
+
+  <p>&nbsp;</p>
+  <p style="font-family: caveat; font-size: x-large; " align="center" >Please <a style="color: red;">scroll right</a> for more comparisons.</p>
+  <p>&nbsp;</p>
+
+
+  <!------------------ END SECTION ------------------>
+
+
+  <!------------------ BEGIN SECTION ------------------>
+  <p>&nbsp;</p>
+  <hr>
+
+  <h2 id="qualitative_compare" align="center">Qualitative Comparison</h2>
+  <p style="font-size: large" width="1000">  
+    We present a comparison between our method and representative controllable video generation approaches: 
+  </p>
+  
+  <ul style="font-size: large">
+    <li> MOFA-Video <a href="#ref-mofa">[1]</a>: a latent-based diffusion model designed for controllable video synthesis. </li>
+    <li> VideoComposer <a href="#ref-videocomposer">[2]</a>: a latent video generation framework that enables flexible conditioning for motion and content. </li>
+  </ul>
+  
+  <p style="font-size: large" width="1200">  
+    For fairness, all methods are fine-tuned according to their official settings.<br>
+  </p>
+  
+
+
+  <div class="scrollable-table-container">
+    <div id="scrollableTableWrapper">
+      <table width="1200" align="center" class="video-no-container">
+            <tbody>
+              <tr>
+                <th class="sticky">Source Video</th>
+                <!-- <th class="sticky-second">Input Image</th> -->
+                <th class="sticky-second">COTA-Motion (Ours)</th>
+                <th>MOFA-Video</th>
+                <th>VideoComposer</th>
+              </tr>
+
+              <tr>
+                <th class="sticky"><video id="master2" width="300" src="assets/qualitative_compare/car-turn.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <!-- <th class="sticky-second"><img width="300" src="assets/qualitative_compare/car.png" alt="Car Image" /></th> -->
+                <th class="sticky-second"><video data-master-id="master2" width="300" src="assets/qualitative_compare/cota-car.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master2" width="300" src="assets/qualitative_compare/mofa-car.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master2" width="300" src="assets/qualitative_compare/videocomposer_car.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              <!-- <div class="has-text-centered" >Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"</div>         -->
+              <tr>
+                <th colspan="4" class="sticky" style="font-size: 22px;">
+                  Motion_of_Car
+                </th>
+              </tr>
+
+              <tr>
+                <th class="sticky"><video id="master3" width="300" src="assets/qualitative_compare/cartoon.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <!-- <th class="sticky-second"><img width="300" src="assets/qualitative_compare/cartoon.png" alt="Cartoon Image" /></th> -->
+                <th class="sticky-second"><video data-master-id="master3" width="300" src="assets/qualitative_compare/cota-cartoon.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master3" width="300" src="assets/qualitative_compare/mofa-cartoon.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master3" width="300" src="assets/qualitative_compare/videocomposer_cartoon.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              <!-- <div class="has-text-centered" >Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis on <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> before <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"</div>         -->
+              <tr>
+                <th colspan="4" class="sticky" style="font-size: 22px;">
+                  Motion_of_Cartoon
+                </th>
+              </tr>
+
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <!------------------ END SECTION ------------------>
+
+    <!------------------ BEGIN SECTION ------------------>
+<p>&nbsp;</p>
+<hr>
+
+<h2 style="font-size: x-large">Applications</h2> 
+<h2 id="downstream_applications" align="center">Downstream Applications</h2>
+
+<h3 style="font-size: large">Video Style Editing</h3>
+<p style="font-size: large" width="1000">  
+We edit the image style using Baidu’s open platform <a href="#ref-baidu">[3]</a> and customize the object in the image using AnyDoor <a href="#ref-anydoor">[4]</a>. The edited image is then processed by our motion transfer method to generate the corresponding video. Object masks are obtained using off-the-shelf segmentation tools.</p>
+
+<img src="assets/downstream_application/figs/vis_edit.png" alt="Video Style Editing Example" width="1000" style="display:block; margin:auto;">
+
+<div class="scrollable-table-container">
+  <div id="scrollableTableWrapper">
+    <table width="1200" align="center" class="video-no-container">
+      <tbody>
+        <tr>
+          <th class="sticky">Source Video</th>
+          <th class="sticky-second">EVA (Ours)</th>
+          <th>FateZero</th>
+        </tr>
+        <tr>
+          <th class="sticky"><video id="master2" width="300" src="assets/downstream_application/car-shadow.mp4" autoplay loop controls muted></video></th>
+          <th class="sticky-second"><video data-master-id="master2" width="300" src="assets/downstream_application/style_transfer.mp4" autoplay loop controls muted></video></th>
+          <th><video data-master-id="master2" width="300" src="assets/downstream_application/object_change.mp4" autoplay loop controls muted></video></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+      <!------------------ END SECTION ------------------>
+<p>&nbsp;</p>
+
+<h2 id="ref" align="left"><a name="ref" id="ref"></a>References</h2>
+
+<p>
+	<a name="ref-mofa" id="ref-mofa"></a>
+  [1] Niu, M., Cun, X., Wang, X., Zhang, Y., Shan, Y. Mofa-video: Controllable image animation via generative motion field adaptions in frozen image-to-video diffusion model. ECCV, 202.
+</p>
+
+<p>
+	<a name="ref-videocompose" id="ref-videocompose"></a>
+  [2] Wang, X., Yuan, H., Zhang, S. Videocomposer: Compositional video synthesis with motion controllability. NIPS, 2024
+</p>
+
+<!-- <p>
+	<a name="ref-motiondirector" id="ref-motiondirector"></a>
+  [3] Michal Geyer, Omer Bar-Tal, Shai Bagon and Tali Dekel. Tokenflow: Consistent diffusion features for consistent video editing. ICLR, 2024.
+</p> -->
+
+<p>
+	<a name="ref-baidu" id="ref-baidu"></a>
+  [3]Baidu AI Open Platform. https://ai.baidu.com. Accessed: 2025-06-26.
+</p>
+
+<p>
+	<a name="ref-controlnet" id="ref-anydoor"></a>
+  [4]Chen X, Huang L, Liu Y. Anydoor: Zero-shot object-level image customization. CVPR 2024
+</p>
+
+
+</div>
+
+      
+<script>
+  
+  window.onload = function () {
+    // Sync function
+    function syncVideos(master, slaves) {
+      master.addEventListener('play', () => {
+        slaves.forEach(video => {
+          video.currentTime = master.currentTime;
+          video.play();
+        });
+      });
+
+      master.addEventListener('pause', () => {
+        slaves.forEach(video => video.pause());
+      });
+
+      master.addEventListener('seeked', () => {
+        slaves.forEach(video => {
+          video.currentTime = master.currentTime;
+        });
+      });
+    }
+
+    // Sync setup for all masters
+    document.querySelectorAll('[id^="master"]').forEach(masterVideo => {
+      const masterId = masterVideo.getAttribute('id');
+      const slaveVideos = Array.from(document.querySelectorAll(`[data-master-id="${masterId}"]`));
+      syncVideos(masterVideo, slaveVideos);
+    });
+  };
+  
+</script>
+
+</body>
+
+</html>
+
+<style>
+  .videoContainer {
+    position: relative;
+    width: 300px;
+    height: auto;
+  }
+
+  .videoContainer video.mainVideo {
+    width: 100%;
+    height: auto;
+  }
+
+  .videoContainer video.overlayVideoUpperRight {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 30%; /* Adjust this value to make video2 smaller or larger */
+  }
+
+  .videoContainer video.overlayVideoLowerRight {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 30%; /* Adjust this value to make video2 smaller or larger */
+  }
+</style>
